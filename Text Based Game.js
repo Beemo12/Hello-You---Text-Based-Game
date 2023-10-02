@@ -1,42 +1,35 @@
 const readlineSync = require('readline-sync');
-const speler = { naam: "", Health: 100, Items: [] };
-
-function startSpel() {
-  console.log("Welkom bij Yassines Tekst Based game");
-  speler.naam = readlineSync.question("Wat is je naam? ");
-  console.log(`Hallo, ${speler.naam}! Jouw avontuur begint.`);
-  explore();
+function startgame() {
+const player = {
+  naam: ' ',
+  health: 100
 }
 
-function explore() {
-  const keuzes = ['links', 'rechts'];
-  const index = readlineSync.keyInSelect(keuzes, 'Je bevindt je op een kruispunt. Welke kant wil je opgaan?');
+var naam = readlineSync.question ("Wat is je naam adventurer?")
+console.log (`Hallo, ${naam}! welkom bij je nieuwe advontuur`)
 
-  if (index === -1) { console.log('Je besloot niet te kiezen. Het avontuur eindigt.'); eindigSpel(); return; }
+console.log (`Je naam is ${naam}... je werd ge arresteerd door de politie hier in Orunsbruck en je viel van de bus af.`)
 
-  const keuze = keuzes[index];
+console.log (`Je bent duizelig en moe..`)
+console.log (`je voelt een scherpe pijn in je buik`)
+console.log ("wil je de scherpe pijn checken?")
+const keuze = readlineSync.keyInSelect([ 'Check de pijn', 'negeer het'], 'Wat ga je doen?');
 
-  switch (keuze) {
-    case "links":
-      console.log("Je ontmoet een vriendelijke man. Hij geeft je een health potion.");
-      speler.Items.push("Healthpotion");
-      speler.Health += 20;
-      break;
-
-    case "rechts":
-      console.log("Oh nee! Een wild monster verschijnt. Je verliest 20 health in de strijd.");
-      speler.Health -= 20;
-      break;
-  }
-
-  console.log(`Status: Naam - ${speler.naam}, Health - ${speler.Health}, Items - ${speler.Items.join(", ")}`);
-
-  const blijvenVerkennen = readlineSync.keyInYNStrict("Wil je doorgaan met verkennen?");
-  blijvenVerkennen ? explore() : eindigSpel();
+if (keuze==1) {
+  console.log ("Je checkt de scherpe pijn niet en je loopt door..")
+  console.log ("na een tijdje lopen voel je je duizelig, je checkt je wond..")
+  console.log ("je checkt je wond en je ziet dat toen je van de bus viel je een grootte wond hebt gekregen, je ziet dit en je gaat dood.")
+  console.log ("SLECHTE EINDE")
+  startgame()
+}
+  else { 
+    console.log ("je checkt de wond en je ziet een grootte wond vanwege de val van de bus, goed dat je het zo vroeg hebt gezien anders zou je zeker dood gaan.")
+    console.log ("je scheurt je shirt en doet het om de wond heen om de bloeding te stoppen.")
+    // hier ga ik 20 health eraf halen wanneer ik een health systeem heb gemaakt.
 }
 
-function eindigSpel() {
-  console.log("Bedankt voor het spelen van mijn game");
+
+
 }
 
-startSpel();
+startgame()
