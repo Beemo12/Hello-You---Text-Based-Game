@@ -83,6 +83,10 @@ function IndeStadKeuze()
 
 const indestad = readlineSync.keyInSelect([ 'Naar hotel', 'Naar grote huis', 'Naar politie bureau.'], 'Wat ga je doen?');
 
+if (indestad==0) {
+  hotel();
+}
+
 if (indestad==1) {
 naarhethuis();
 }
@@ -91,8 +95,6 @@ if (indestad==2) {
 politiebureau();
 }
 function hotel() {
-if (indestad==0) {
-  hotel();
   console.log ("Je loopt naar de Hotel en gaat naar binnen")
   console.log ("Je ziet een man en haar vrouw aan het schreeuwen aan de manager van de hotel")
   const manager = readlineSync.keyInSelect([ 'Praat met man en haar vrouw', 'Praat met manager'], '');
@@ -202,7 +204,7 @@ function politiebureau() {
   console.log ("Je loopt naar de politie bureau..")
   console.log ("Je zegt tegen je zelf:")
   console.log (`${naam}: Waarom ben ik zo iets doms aan het doen..`)
-  const politieburueau = readlineSync.keyInSelect(['geef je zelf aan', 'loop weg', ], 'Wat ga je doen?');
+  const politiebureau = readlineSync.keyInSelect(['geef je zelf aan', 'loop weg', ], 'Wat ga je doen?');
   if (politiebureau==1) {
     console.log ("je loopt weg.")
     IndeStadKeuze();
@@ -341,5 +343,5 @@ function naarhethuis()
         IndeStadKeuze();
       }
     }
-}
+
 startgame()
