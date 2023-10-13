@@ -92,6 +92,7 @@ politiebureau();
 }
 function hotel() {
 if (indestad==0) {
+  hotel();
   console.log ("Je loopt naar de Hotel en gaat naar binnen")
   console.log ("Je ziet een man en haar vrouw aan het schreeuwen aan de manager van de hotel")
   const manager = readlineSync.keyInSelect([ 'Praat met man en haar vrouw', 'Praat met manager'], '');
