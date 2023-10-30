@@ -7,3 +7,4 @@ Wanneer je verder gaat in de verhaal kom je bij de stad Valentine waar bij je aa
 en je hebt de keuze om je zelf aan tegeven bij de politie of om naar de hotel te gaan, als je naar de hotel gaat kan de manager je gratis laten verdwijnen. Als je naar de politie bureau gaat om je zelf aan tegeven kwam je achter waarom je eigenlijk in de politie bus was; de grote huis waar niemand was? je had daar iedereen vermoord.
 
 # Flowchart:
+Zie de afbeelding in the flowchart folder.
