@@ -1,10 +1,13 @@
 const readlineSync = require('readline-sync');
+var naam;
+
 function startgame() {
 const player = {
   naam: ' ',
 }
 
-var naam = readlineSync.question ("Wat is je naam adventurer?")
+
+naam = readlineSync.question ("Wat is je naam adventurer?")
 console.log (`Hallo, ${naam}! welkom bij je nieuwe advontuur`)
 
 console.log (`Je naam is ${naam}... je werd ge arresteerd door de politie hier in Orunsbruck en je viel van de bus af.`)
@@ -77,6 +80,7 @@ else {
 
 IndeStadKeuze();
 }
+}
 
 function IndeStadKeuze()
 {
@@ -94,6 +98,9 @@ naarhethuis();
 if (indestad==2) {
 politiebureau();
 }
+
+}
+
 function hotel() {
   console.log ("Je loopt naar de Hotel en gaat naar binnen")
   console.log ("Je ziet een man en haar vrouw aan het schreeuwen aan de manager van de hotel")
@@ -194,12 +201,12 @@ function hotel() {
           console.log (`######################################`)
           startgame()
 
+          }
         }
       }
     }
-  }
-}
-}
+  } 
+
 function politiebureau() {
   console.log ("Je loopt naar de politie bureau..")
   console.log ("Je zegt tegen je zelf:")
@@ -322,7 +329,7 @@ function politiebureau() {
     }
   }
 }
-}
+
 function naarhethuis()
 {
       console.log ("je bent bij de grote huis, wat wil je doen?")
@@ -339,9 +346,12 @@ function naarhethuis()
       }
 
       if (grotehuis==2) {
-      console.log ("je loopt weg..")
-        IndeStadKeuze();
+      console.log ("je loopt weg..");
+      IndeStadKeuze()
+      
+
       }
     }
-
+  
+  
 startgame()
