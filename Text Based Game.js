@@ -274,7 +274,6 @@ function politiebureau() {
           console.log (`Generaal: Goed, dat was de punt.`)
           console.log (`Generaal: De reden dat je hier bent is omdat de politie agent bij de bureau in Valentine had aangegeven dat iemand met de naam: ${naam} zich wou aan geven.`)
           console.log (`Generaal: Maar dat gaat niet zo makkelijk..`)
-          function vraag1() {
           const vraag1 = readlineSync.keyInSelect(['Wat ga je met me doen?', 'Wat heb ik gedaan?', ], 'Wat ga je vragen?');
           if (vraag1==0) {
             console.log (`${naam}: Wat ga je met mij doen?`)
@@ -323,7 +322,7 @@ function politiebureau() {
           console.log (`GEVANGENIS EINDE`)
           console.log (`#########################################`)
           startgame()
-          }
+          
         }
       }
     }
